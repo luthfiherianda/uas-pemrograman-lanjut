@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Seminar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pendaftaran Seminar Nasional</h1>
+    <form id="seminarForm">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="instansi">Instansi</label>
+      <input type="text" id="instansi" name="instansi">
+
+      <label for="topik">Topik Seminar</label>
+      <select id="topik" name="topik" required>
+        <option value="">-- Pilih Topik --</option>
+        <!-- Topik akan diisi via JS -->
+      </select>
+
+      <label>Metode Pembayaran</label>
+      <div class="radio-group">
+        <label><input type="radio" name="pembayaran" value="Transfer" required> Transfer Bank</label>
+        <label><input type="radio" name="pembayaran" value="QRIS"> QRIS</label>
+      </div>
+
+      <button type="submit">Daftar</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
